@@ -52,10 +52,27 @@ $(function() {
         }
     }
 
+    let content;
+
     function play() {
         if (players.length > 1) {
+            // Remove Old & Add New HTML
             $("#container").remove();
-            $("#mobile").load("content/game.html");
+            $("#mobile").load("url");
+            // Change Layout
+            $("container").css({
+                "justify-content": "space around"
+            });
+            // Get JSON With Game Content
+            $.getJSON("de.json", data => {
+                content = data;
+                next();
+            });
         }
+    }
+
+    function next() {
+        $(".heading").text("Never Have I Ever");
+        $(".body").text(content["Never Have I Ever"][0]);
     }
 });
