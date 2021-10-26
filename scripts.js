@@ -55,7 +55,7 @@ $(function() {
     function play() {
         if (players.length > 1) {
             $("#container").remove();
-            $("#mobile").load("http://127.0.0.1:5000/C:/Users/WinSieben/Desktop/Party%20Game/index.html");
+            $("#mobile").load("content/game.html");
         }
     }
 });
