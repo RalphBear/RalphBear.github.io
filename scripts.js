@@ -58,7 +58,7 @@ $(function() {
         if (players.length > 1) {
             // Remove Old & Add New HTML
             $("#container").remove();
-            $("#mobile").load("url");
+            $("#mobile").load("game.html");
             // Change Layout
             $("container").css({
                 "justify-content": "space around"
